@@ -1,0 +1,9 @@
+{% extends 'base.html ' %}
+
+{% block main %}
+    <form method="post">
+        {% csrf_token %} <!-- protecao do nosso form -->
+        {{ form.as_p }} <!-- vamos renderizar a variável form -->
+        <button type="submit">Login</button>
+    </form>
+{% endblock %}
